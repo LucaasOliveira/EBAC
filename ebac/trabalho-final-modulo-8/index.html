@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de médias</title>
+  </head>
+  <body>
+  <div class="container">  
+  <header>
+    <img src="./images/planner_9196416.png" alt="agenda de contatos">
+    <h1>Agenda de Contatos</h1>
+  </header>
+  <form id="form-contatos">
+    <input id="nome-contato" pattern="[A-Za-z ]+" type="text" placeholder="Nome contato" required>
+    <input id="telefone-contato" type="text" placeholder="ddd + número" pattern="[0-9]{1,11}" minlength="10" maxlength="11" required>
+    <button>Cadastrar</button>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+      </tr>
+    </thead>
+    <tbody id="linha-contato">
+    </tbody>
+  </table>
+
+
+ 
+</div> 
+<script src="./main.js"></script>
+</body>
+</html>
