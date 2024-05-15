@@ -10,7 +10,6 @@ imgReprovado.alt = "emoji triste";
 const spanAprovado = `<span class="resultado aprovado">Aprovado</span>`
 const spanReprovado = `<span class="resultado reprovado">Reprovado</span>`
 
-
 const atividades = [];
 const notas = [];
 
@@ -20,31 +19,35 @@ form.addEventListener("submit", function(e) {
   const linha = adicionaLinha();
   atualizaLinha(linha);
   atualizaMediaFinal();
-
   form.reset();
-
 });
 
 function adicionaLinha() {
   const inputNomeAtividade = document.querySelector("#nome-atividade");
   const inputNotaAtividade = document.querySelector("#nota-atividade");
 
-  atividades.push(inputNomeAtividade.value);
-  notas.push(parseFloat(inputNotaAtividade.value));
+  if(atividades.includes(inputNomeAtividade.value)) {
+    alert(`A atividade: ${inputNomeAtividade.value} já foi inserida.`);
+    form.reset();
+  } else {
 
-  const linha = document.createElement('tr');
-  const colNome = document.createElement('td');
-  colNome.textContent = inputNomeAtividade.value;
-  const colNota = document.createElement('td');
-  colNota.textContent = inputNotaAtividade.value;
-  const colStatus = document.createElement('td');
-  colStatus.appendChild(inputNotaAtividade.value >= 7 ? imgAprovado.cloneNode(true) : imgReprovado.cloneNode(true));
+    atividades.push(inputNomeAtividade.value);
+    notas.push(parseFloat(inputNotaAtividade.value));
 
-  linha.appendChild(colNome);
-  linha.appendChild(colNota);
-  linha.appendChild(colStatus);
+    const linha = document.createElement('tr');
+    const colNome = document.createElement('td');
+    colNome.textContent = inputNomeAtividade.value;
+    const colNota = document.createElement('td');
+    colNota.textContent = inputNotaAtividade.value;
+    const colStatus = document.createElement('td');
+    colStatus.appendChild(inputNotaAtividade.value >= 7 ? imgAprovado.cloneNode(true) : imgReprovado.cloneNode(true));
 
-  return linha;
+    linha.appendChild(colNome);
+    linha.appendChild(colNota);
+    linha.appendChild(colStatus);
+
+    return linha;
+  };
 };
 
 function atualizaLinha(linha) {
