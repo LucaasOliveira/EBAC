@@ -57,7 +57,7 @@ function atualizaLinha(linha) {
 
 function atualizaMediaFinal() {
   const mediaFinal = calculaMediaFinal();
-  document.querySelector("#media-final-nota").textContent = mediaFinal;
+  document.querySelector("#media-final-nota").textContent = mediaFinal.toFixed(2);
   document.querySelector("#media-final-resultado").innerHTML = mediaFinal >= 7 ? spanAprovado : spanReprovado; 
 
   console.log(mediaFinal);
