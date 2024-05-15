@@ -30,6 +30,7 @@ function cadastrarContato() {
     
     linha.appendChild(colNome);
     linha.appendChild(colTelefone);
+    form.reset();
   };
 };
 
