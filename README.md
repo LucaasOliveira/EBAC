@@ -7,10 +7,10 @@ Este repositório contém uma coleção de exercícios e projetos realizados dur
 A baixo vou deixar alguns exercícios, mas podem ficar à vontade para visitar todas as pastas:
 
 - **Exercício HTML/JAVASCRIPT Calculadora de média escolar:** Descrição e resultado no link
-  - [Link para o código](https://github.com/LucaasOliveira/EBAC/tree/main/ebac/modulo-8)
+  - [Link para o código](https://github.com/LucaasOliveira/EBAC/tree/main/ebac/integrando-html-com-javascript)
  
 - **Exercício HTML/JAVASCRIPT Agenda de contatos:** Descrição e resultado no link
-  - [Link para o código](https://github.com/LucaasOliveira/EBAC/tree/main/ebac/trabalho-final-modulo-8)
+  - [Link para o código](https://github.com/LucaasOliveira/EBAC/tree/main/ebac/projeto-calculadora-de-medias)
 
 ## Como Utilizar
 
